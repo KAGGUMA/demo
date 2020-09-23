@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color:red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+  <p>Entebbe Airport returns to business Oct 1 after six month closure
+    Uganda airlines ready to resume regional flights Kampala, Uganda | THE INDEPENDENT |  Nine airlines are all …</p> 
+  <p>LIVE: Makerere University main building burning down
+    The Independent September 20, 2020 NEWS, The News Today 1 Comment
+    
+    
+    Makerere University main building is on fire. PHOTO VIA @MakerereU
+    Kampala, Uganda | THE INDEPENDENT | Reports from Makerere University indicate that Police Fire Brigade is trying to put out a fire which has now covered almost half of the roof of the institution’s main building. All indications are the fire started just after mid-night.
+    
+    “The fire brigade is on ground. Everyone is trying their best. The fire is heavy and sprouting from the right side of the Building. The fire flames are heavy coming through right side of the roof which has sunk in. We all need to pray for the Ivory Tower,” tweeted @MakerereU at about 1am, Sunday.
+    
+    Soon after the initial reports came out, fire spread and covered all floors of the right side of the building. That entire wing looks likely to cave in.
+    
+    The main building houses several offices including the university’s main-hall. The printery and Vice Chancellor’s office are also located at the same building.
+    
+    Makerere University, the ‘Ivory Tower’ of Ugandan education, was due to resume studies next month after a long break off due to the COVID-19 pandemic.
+    
+    Mgid
+    
+    PROFIT NEWS
+    The Best Way To Make Money In Uganda!
+    LEARN MORE→
+    While fires have raked havoc at Uganda’s secondary and primary schools in the past decade, there have been no such incidents at the universities.
+    
+    
+    The Main Administration Building is one of the university’s oldest, and was completed in 1941 under the leadership of George C. Turner, Principal, Makerere College from 1939 to 1946. The Administration block is an iconic building at Uganda’s oldest university.
+    
+    This was after the Duke of Gloucester, representing King George VI had cut the first sod for the construction of the building on 3rd November 1938.
+    
+    “The Main Building with its unique 20th century British architecture is easily Makerere’s most recognisable symbol and was constructed with funds from the Colonial Development bourse, ” according to the Makerere website.
+    
+    
+    The main building at Makerere.
+    “The building’s construction was greatly delayed by a scarcity of resources to purchase materials as Britain and her allies grappled with the expenses of World War II. As a result, some of the carpentry work had to be done on-site at the Technical College.”
+    
+    The Principal then focused on turning Makerere into a University College and establishing buildings.
+    
+    As a result both the St. Francis and St. Augustine Chapels were completed in the same year 1941 and by 1944, plans for the establishment of a School of Civil Engineering at Makerere were already being discussed by the British House of Commons.</p>  
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
